@@ -1,0 +1,24 @@
+{
+    "Dialogue": [
+        {
+            
+            
+            
+        },
+        {
+            "NpcId": 0,
+            "NpcName": "Seba",
+            "dId": 1,
+            "Sentence": "Masz jakiś problem?"
+        },
+        {
+            "NpcId": 0,
+            "NpcName": "Seba",
+            "dId": 2,
+            "Sentence": "Ja znam ludzi, oni cię dojadą, ty ich nie znasz oni cię potną!"
+        }
+
+    ]
+
+
+}
