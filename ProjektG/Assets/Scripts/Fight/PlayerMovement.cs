@@ -10,15 +10,45 @@ public class PlayerMovement : MonoBehaviour
     Vector2 move;
     Vector2 mousePos;
     public Camera cam;
+    public string Bron;
+    public Animator anim;
 
     void Update()
     {
-        move.x = Input.GetAxisRaw("Horizontal");
-        move.y = Input.GetAxisRaw("Vertical");
-        mousePos= cam.ScreenToWorldPoint(Input.mousePosition);
+        MoveUpdate();
+        Fight();
+        Block();
     }
 
     private void FixedUpdate() 
+    {
+        MoveFixed();
+    }
+
+    void Fight()
+    {
+        if(Input.GetButtonDown("Fire1"))
+            anim.SetBool("Hit", true);
+        else if(Input.GetButtonUp("Fire1"))
+            anim.SetBool("Hit", false);
+    }
+
+    void Block()
+    {
+        if(Input.GetButtonDown("Fire2"))
+            anim.SetBool("Block", true);
+        else if(Input.GetButtonUp("Fire2"))
+            anim.SetBool("Block", false);
+    }
+
+    void MoveUpdate()
+    {
+        move.x = Input.GetAxisRaw("Horizontal");
+        move.y = Input.GetAxisRaw("Vertical");
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    void MoveFixed()
     {
         rb.MovePosition(rb.position + move * speed * Time.fixedDeltaTime);
         Vector2 look = mousePos - rb.position;
