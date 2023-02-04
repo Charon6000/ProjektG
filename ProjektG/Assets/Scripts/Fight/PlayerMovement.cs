@@ -28,9 +28,9 @@ public class PlayerMovement : MonoBehaviour
     void Fight()
     {
         if(Input.GetButtonDown("Fire1"))
-            anim.SetBool("Hit", true);
+            anim.SetBool("handHit", true);
         else if(Input.GetButtonUp("Fire1"))
-            anim.SetBool("Hit", false);
+            anim.SetBool("handHit", false);
     }
 
     void Block()

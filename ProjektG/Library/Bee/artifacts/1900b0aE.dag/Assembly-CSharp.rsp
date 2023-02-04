@@ -411,6 +411,7 @@
 "Assets/Scripts/DialogSystem/Nodes/EndNode.cs"
 "Assets/Scripts/DialogSystem/Nodes/StartNode.cs"
 "Assets/Scripts/DialogSystem/UIInformer.cs"
+"Assets/Scripts/Fight/EnemyBehaviour.cs"
 "Assets/Scripts/Fight/PlayerMovement.cs"
 "Assets/Scripts/Inputs.cs"
 "Assets/Scripts/OWController.cs"
